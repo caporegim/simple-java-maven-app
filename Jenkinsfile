@@ -2,7 +2,7 @@ pipeline {
     agent {
         docker {
             image 'maven:3-alpine'
-            args '-u root'
+            args '-v /root/.m2:/Users/petr.metin/.m2'
         }
     }
     stages {
